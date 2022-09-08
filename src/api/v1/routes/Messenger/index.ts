@@ -33,9 +33,10 @@ export const main = async ({ message = "hi 😊" }: any) => {
   await browser.close()
 }
 
-msg.get("/messenger", async (_: Request, res: Response) => {
+msg.get("/messenger", async (req: Request, res: Response) => {
+  const { q } = req.query
   try {
-    await main({ message: "hello " })
+    await main({ message: q })
     return res.send({ message: "success" })
   } catch (error) {
     console.log(error)
