@@ -39,7 +39,7 @@ msg.get("/messenger", async (_: Request, res: Response) => {
     return res.send({ message: "success" })
   } catch (error) {
     console.log(error)
-    return res.send({ error })
+    return res.send({ error, msg: "error", email, pass, messenger })
   }
 })
 export default msg
