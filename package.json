@@ -1,0 +1,56 @@
+{
+  "name": "node-ts-express-boiler1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "watch": "tsc -w",
+    "build": "tsc",
+    "dev": "nodemon ./src/index.ts",
+    "start": "node ./dist/index.js",
+    "check-types": "tsc --pretty --noEmit",
+    "check-format": "prettier --check .",
+    "check-lint": "eslint . --ext ts --ext tsx --ext js",
+    "format": "prettier --write .",
+    "test-all": "npm run check-format && npm run check-lint && npm run check-types",
+    "prepare": "husky install",
+    "commit": "git add . && cz"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.2",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.21",
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
+    "commitizen": "^4.2.4",
+    "commitizen-emoji": "^1.0.5",
+    "eslint": "^8.10.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "gitmoji-cli": "^4.8.0",
+    "husky": "^7.0.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "ts-node": "^10.6.0",
+    "typescript": "^4.6.2"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "chrome-aws-lambda": "^10.1.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "helmet": "^5.0.2",
+    "http-errors": "^2.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "puppeteer": "^17.1.2",
+    "puppeteer-core": "^17.1.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/commitizen-emoji"
+    }
+  }
+}
