@@ -1,34 +1,40 @@
-# How to use ?
+<div align='center'>
 
-```
-yarn install
+# Automatic Facebook Message
 
-yarn dev
-```
+</div>
 
-# How to commit ?
+## ⚡ Quickstart
 
-```
-yarn commit
-```
+### Install and run the app
 
-## need for Husky locally
-
-```
-chmod ug+x .husky/_
-chmod ug+x .git/hooks/_
+```jsx
+yarn install && yarn dev
 ```
 
-# Docker
+### Edit the .env
 
-## build
+```jsx
+EMAIL=YOUR_EMAIL
+PASS=YOUR_PASSWORD
+MESSENGER=https://m.facebook.com/messages/read/?tid=cid.c.100*********************
+```
 
-```
-docker build -t app-name-you-want .
+### Copy and Past this in address bar of browser
+
+```jsx
+localhost:3000/api/messenger?q=your message
 ```
 
-## run
+## 🎯 Features
 
-```
-docker run -d -p 3000:3000 app-name-you-want
-```
+- Message someone in facebook using rest api
+
+## 💡 Goal of this Project
+
+- Be able to message someone in facebook even AFK / applying CRON jobs
+
+## ⚠️ Limitations
+
+- Loading time approx ~10 seconds
+- When deployed to production will error due to ip restriction of facebook (need to confirm first in facebook UI to proceed )
