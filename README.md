@@ -1,6 +1,6 @@
 <div align='center'>
 
-# Automatic Facebook Message
+# Automatic Facebook Messaging
 
 </div>
 
@@ -38,3 +38,13 @@ localhost:3000/api/messenger?q=your message
 
 - Loading time approx ~10 seconds
 - When deployed to production will error due to ip restriction of facebook (need to confirm first in facebook UI to proceed )
+
+## Deploying to Production
+
+- You can deploy the app to certain endpoint (heroku, aws, gcp, etc )
+
+### Commands
+
+```jsx
+yarn build && yarn start
+```
