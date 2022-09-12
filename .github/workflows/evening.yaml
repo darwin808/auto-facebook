@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: cURL request
         # Hit the webhook endpoint to rebuild  from the "main" branch
-        run: curl --silent https://peaceful-cove-89366.herokuapp.com/api/messenger
+        run: curl --silent https://peaceful-cove-89366.herokuapp.com/api/posts
