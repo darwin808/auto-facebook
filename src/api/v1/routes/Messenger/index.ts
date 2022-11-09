@@ -22,7 +22,9 @@ export const main = async ({ message = "hi 😊" }: any) => {
 
   await page.type("#email", email)
   await page.type("#pass", pass)
-  await page.click('[data-testid="royal_login_button"]')
+  await page.keyboard.press("Enter")
+
+  // await page.click('[data-testid="royal_login_button"]')
 
   await page.waitForNavigation()
 
